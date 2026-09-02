@@ -1,0 +1,4 @@
+# Normalise line endings for text, keep binaries binary
+* text=auto eol=lf
+*.png binary
+*.woff2 binary

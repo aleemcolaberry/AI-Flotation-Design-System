@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
+<title>AI Flotation — transactional email</title>
+</head>
+<body style="margin:0;padding:0;background:#F7F7F8;">
+<!-- Preheader: replace with the real one-line summary; kept out of visible layout -->
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">{{preheader_text}}</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#F7F7F8;">
+<tr><td align="center" style="padding:24px 12px;">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:600px;background:#FFFFFF;">
+<tr><td style="background:#17171B;padding:22px 32px;" bgcolor="#17171B">
+      <span style="font-family:'Helvetica Neue',Arial,sans-serif;font-weight:600;font-size:18px;letter-spacing:.08em;color:#FFFFFF;text-transform:uppercase;">AI FLOTATION</span>
+    </td></tr>
+<tr><td style="padding:32px 32px 8px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:1.6;color:#17171B;">
+  <p style="margin:0 0 16px;">Hi {{recipient_first_name}},</p>
+  <p style="margin:0 0 24px;">{{body_copy}}</p>
+</td></tr>
+<tr><td style="padding:0 32px 32px;">
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td>
+    
+    <a href="{{cta_url}}" style="display:inline-block;background:#5646C6;color:#FFFFFF;font-family:'Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:15px;line-height:44px;height:44px;padding:0 28px;border-radius:4px;text-decoration:none;" target="_blank">{{cta_label}}</a>
+    
+  </td></tr></table>
+</td></tr>
+<tr><td style="background:#F7F7F8;padding:24px 32px;border-top:1px solid #85858E20;" bgcolor="#F7F7F8">
+    <p style="margin:0;font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;line-height:1.6;color:#5A5A62;">
+      AI Flotation · [mailing address — confirm with Ali] · You're receiving project or intake updates. <a href="{{unsubscribe_url}}" style="color:#5A5A62;text-decoration:underline;">Unsubscribe</a>
+    </p>
+  </td></tr>
+</table>
+</td></tr>
+</table>
+<!--
+  Logo: this shell ships with a text wordmark, not the PNG Gmail/Outlook require.
+  Swap in aiflotation.com's exported PNG (<=48px tall) in the header cell above.
+  Button hex confirmed from tokens/brands/ai-flotation.json → email.buttonHex = #5646C6.
+  #17171B dark band, wordmark in white Archivo 600 caps, letterspaced. Nothing else in the header.
+  White, minimal: one line of legal, one unsubscribe link. No social icons.
+-->
+</body>
+</html>
