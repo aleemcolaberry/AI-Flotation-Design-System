@@ -1,0 +1,277 @@
+{
+  "brandId": "ai-flotation",
+  "name": "AI Flotation",
+  "generated": "2026-09-16",
+  "source": "https://claude.ai/design/p/f6e2372d-e01f-4c16-8e6e-e055e205d790?file=AI+Flotation+Design+System.html",
+  "variants": {
+    "a": {
+      "systemId": "ai-flotation-a",
+      "variantLabel": "Option A — Forge",
+      "email": {
+        "buttonHex": "#BA430E",
+        "header": "white, PNG mark <= 48px + wordmark, accent rule under the header",
+        "footerBg": "#F6F6F6",
+        "maxWidth": 600
+      },
+      "contrast": {
+        "light": [
+          {
+            "pair": "fg on bg",
+            "fg": "#1A1917",
+            "bg": "#F7F6F4",
+            "ratio": 16.27,
+            "min": 4.5,
+            "pass": true
+          },
+          {
+            "pair": "fg on bgElevated",
+            "fg": "#1A1917",
+            "bg": "#FFFFFF",
+            "ratio": 17.57,
+            "min": 4.5,
+            "pass": true
+          },
+          {
+            "pair": "fgMuted on bg",
+            "fg": "#56524B",
+            "bg": "#F7F6F4",
+            "ratio": 7.19,
+            "min": 4.5,
+            "pass": true
+          },
+          {
+            "pair": "accentContrast on accent",
+            "fg": "#FFFFFF",
+            "bg": "#BA430E",
+            "ratio": 5.39,
+            "min": 4.5,
+            "pass": true
+          },
+          {
+            "pair": "accent on bg",
+            "fg": "#BA430E",
+            "bg": "#F7F6F4",
+            "ratio": 4.99,
+            "min": 3,
+            "pass": true
+          }
+        ],
+        "dark": [
+          {
+            "pair": "fg on bg",
+            "fg": "#EDEAE6",
+            "bg": "#121110",
+            "ratio": 15.73,
+            "min": 4.5,
+            "pass": true
+          },
+          {
+            "pair": "fg on bgElevated",
+            "fg": "#EDEAE6",
+            "bg": "#1C1A18",
+            "ratio": 14.47,
+            "min": 4.5,
+            "pass": true
+          },
+          {
+            "pair": "fgMuted on bg",
+            "fg": "#ADA79E",
+            "bg": "#121110",
+            "ratio": 7.9,
+            "min": 4.5,
+            "pass": true
+          },
+          {
+            "pair": "accentContrast on accent",
+            "fg": "#221206",
+            "bg": "#F0813C",
+            "ratio": 6.84,
+            "min": 4.5,
+            "pass": true
+          },
+          {
+            "pair": "accent on bg",
+            "fg": "#F0813C",
+            "bg": "#121110",
+            "ratio": 7.1,
+            "min": 3,
+            "pass": true
+          }
+        ]
+      },
+      "fonts": {
+        "heading": "Space Grotesk",
+        "body": "Archivo",
+        "license": "OFL (Google Fonts)"
+      },
+      "typeScale": {
+        "base": 16,
+        "ratio": 1.3
+      },
+      "radius": 2,
+      "shadow": "0 1px 2px rgba(20,18,16,0.30)",
+      "motion": {
+        "personality": "Decisive — crisp, immediate, no flourish",
+        "duration": {
+          "fast": "80ms",
+          "base": "140ms",
+          "slow": "210ms"
+        },
+        "easing": {
+          "standard": "cubic-bezier(0.3,0,0,1)",
+          "enter": "cubic-bezier(0.16,0,0,1)",
+          "exit": "cubic-bezier(0.4,0,1,1)"
+        },
+        "enterDistance": "5px",
+        "pressScale": 0.99,
+        "rules": "fast → hover, press, toggles · base → menus, toasts, accordions · slow → modals, view changes; exits run at fast with the exit curve; prefers-reduced-motion collapses all motion"
+      },
+      "responsive": {
+        "breakpoints": {
+          "sm": "640px",
+          "md": "768px",
+          "lg": "1024px",
+          "xl": "1280px"
+        },
+        "touchTargetMin": "44px",
+        "pagePadding": "clamp(16px, 4vw, 32px)",
+        "note": "Fluid layout: paddings clamp, grids use minmax(min(Npx,100%),1fr); display type may use clamp() between the Heading and Display steps."
+      }
+    },
+    "b": {
+      "systemId": "ai-flotation-b",
+      "variantLabel": "Option B — Harbor",
+      "email": {
+        "buttonHex": "#0E6E63",
+        "header": "white, PNG mark <= 48px + wordmark, accent rule under the header",
+        "footerBg": "#F6F6F6",
+        "maxWidth": 600
+      },
+      "contrast": {
+        "light": [
+          {
+            "pair": "fg on bg",
+            "fg": "#14201D",
+            "bg": "#F6F8F7",
+            "ratio": 15.7,
+            "min": 4.5,
+            "pass": true
+          },
+          {
+            "pair": "fg on bgElevated",
+            "fg": "#14201D",
+            "bg": "#FFFFFF",
+            "ratio": 16.75,
+            "min": 4.5,
+            "pass": true
+          },
+          {
+            "pair": "fgMuted on bg",
+            "fg": "#4C5B57",
+            "bg": "#F6F8F7",
+            "ratio": 6.69,
+            "min": 4.5,
+            "pass": true
+          },
+          {
+            "pair": "accentContrast on accent",
+            "fg": "#FFFFFF",
+            "bg": "#0E6E63",
+            "ratio": 6.12,
+            "min": 4.5,
+            "pass": true
+          },
+          {
+            "pair": "accent on bg",
+            "fg": "#0E6E63",
+            "bg": "#F6F8F7",
+            "ratio": 5.74,
+            "min": 3,
+            "pass": true
+          }
+        ],
+        "dark": [
+          {
+            "pair": "fg on bg",
+            "fg": "#E9EFED",
+            "bg": "#0E1413",
+            "ratio": 15.99,
+            "min": 4.5,
+            "pass": true
+          },
+          {
+            "pair": "fg on bgElevated",
+            "fg": "#E9EFED",
+            "bg": "#17201E",
+            "ratio": 14.29,
+            "min": 4.5,
+            "pass": true
+          },
+          {
+            "pair": "fgMuted on bg",
+            "fg": "#A2B1AC",
+            "bg": "#0E1413",
+            "ratio": 8.35,
+            "min": 4.5,
+            "pass": true
+          },
+          {
+            "pair": "accentContrast on accent",
+            "fg": "#062B25",
+            "bg": "#46C2AF",
+            "ratio": 6.95,
+            "min": 4.5,
+            "pass": true
+          },
+          {
+            "pair": "accent on bg",
+            "fg": "#46C2AF",
+            "bg": "#0E1413",
+            "ratio": 8.51,
+            "min": 3,
+            "pass": true
+          }
+        ]
+      },
+      "fonts": {
+        "heading": "Manrope",
+        "body": "Manrope",
+        "license": "OFL (Google Fonts)"
+      },
+      "typeScale": {
+        "base": 16,
+        "ratio": 1.3
+      },
+      "radius": 6,
+      "shadow": "0 1px 3px rgba(10,20,18,0.18)",
+      "motion": {
+        "personality": "Decisive — crisp, immediate, no flourish",
+        "duration": {
+          "fast": "80ms",
+          "base": "140ms",
+          "slow": "210ms"
+        },
+        "easing": {
+          "standard": "cubic-bezier(0.3,0,0,1)",
+          "enter": "cubic-bezier(0.16,0,0,1)",
+          "exit": "cubic-bezier(0.4,0,1,1)"
+        },
+        "enterDistance": "5px",
+        "pressScale": 0.99,
+        "rules": "fast → hover, press, toggles · base → menus, toasts, accordions · slow → modals, view changes; exits run at fast with the exit curve; prefers-reduced-motion collapses all motion"
+      },
+      "responsive": {
+        "breakpoints": {
+          "sm": "640px",
+          "md": "768px",
+          "lg": "1024px",
+          "xl": "1280px"
+        },
+        "touchTargetMin": "44px",
+        "pagePadding": "clamp(16px, 4vw, 32px)",
+        "note": "Fluid layout: paddings clamp, grids use minmax(min(Npx,100%),1fr); display type may use clamp() between the Heading and Display steps."
+      }
+    }
+  },
+  "allPass": true
+}

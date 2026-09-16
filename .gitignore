@@ -6,3 +6,10 @@ desktop.ini
 *~
 .idea/
 .vscode/
+
+# Tooling — there is no build step; @babel/standalone is only installed ad hoc to rerun app/build.js
+node_modules/
+dist/
+.cache/
+npm-debug.log*
+package-lock.json

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Builds — AI Flotation starter screen</title>
+<link rel="icon" type="image/svg+xml" href="../../assets/ai-flotation-mark.svg">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+/* Starter screen — page chrome only. Everything visual comes from the tokens in styles.css; flip direction and mode from the nav and nothing here changes. */
+.nav{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:12px var(--page-padding);background:var(--bg-elevated);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.lock{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:inherit;font-family:var(--font-heading);font-weight:var(--fw-heading);font-size:18px;letter-spacing:-0.01em}
+.mark{width:26px;height:26px;background:var(--accent);-webkit-mask:url(../../assets/ai-flotation-mark.svg) center/contain no-repeat;mask:url(../../assets/ai-flotation-mark.svg) center/contain no-repeat;flex-shrink:0}
+.links{display:flex;gap:18px;margin-left:auto;align-items:center;flex-wrap:wrap}
+.links a{font-size:14px;color:var(--fg-muted);text-decoration:none;padding:12px 4px}
+.links a.on{color:var(--accent);font-weight:600}
+.links .b-btn{padding:8px 14px;font-size:14px}
+.page{max-width:1120px;margin:0 auto;padding:clamp(20px,4vw,40px) var(--page-padding) 64px;display:flex;flex-direction:column;gap:24px}
+.crumbs{display:flex;gap:8px;font-size:14px;color:var(--fg-muted)}
+.crumbs b{color:var(--fg);font-weight:600}
+.titlerow{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.titlerow p{margin:6px 0 0;color:var(--fg-muted);max-width:560px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:14px}
+.kpi small{display:block;font-size:11px;letter-spacing:0.09em;text-transform:uppercase;color:var(--fg-muted);font-weight:600}
+.kpi strong{display:block;font-family:var(--font-heading);font-size:var(--fs-h2);line-height:1.2;margin-top:6px}
+.kpi span{font-size:13px;color:var(--fg-muted)}
+.twrap{background:var(--bg-elevated);border:1px solid var(--line);border-radius:calc(var(--radius) + 2px);overflow:hidden}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;padding:10px 16px;font-size:12px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--fg-muted);background:var(--bg)}
+td{padding:12px 16px;border-top:1px solid var(--line)}
+td.num{text-align:right;font-variant-numeric:tabular-nums;color:var(--fg-muted)}
+.pill{display:inline-flex;align-items:center;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:color-mix(in srgb,var(--c) 10%,transparent);color:var(--c);border:1px solid color-mix(in srgb,var(--c) 35%,transparent)}
+.ptrack{height:8px;border-radius:999px;background:var(--accent-soft);overflow:hidden;min-width:120px}
+.pfill{height:100%;background:var(--accent);border-radius:999px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:14px}
+@media (max-width:640px){.hide-sm{display:none}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <a class="lock" href="../../index.html"><span class="mark"></span>AI Flotation</a>
+  <nav class="links" aria-label="Primary">
+    <a href="#" class="on">Builds</a><a href="#">Scoping</a><a href="#">Handoffs</a>
+    <button class="b-btn b-btn--ghost" id="variant" type="button">Harbor</button>
+    <button class="b-btn b-btn--ghost" id="theme" type="button">Dark mode</button>
+    <button class="b-btn" type="button">Book a scoping call</button>
+  </nav>
+</header>
+<main class="page b-enter">
+  <div class="crumbs"><span>Home</span><span>/</span><span>Clients</span><span>/</span><b>Builds</b></div>
+  <div class="titlerow">
+    <div><h1 style="font-size:var(--fs-h2);margin:0">Builds</h1><p>Every active build for Bayside Logistics, with scoping notes and handoff dates. Updated at the end of each working day.</p></div>
+    <button class="b-btn b-btn--secondary" type="button">See process</button>
+  </div>
+
+  <div class="b-alert b-alert--success" style="max-width:560px"><div><strong>Delivered.</strong> Invoice OCR pipeline is live. Handoff call is booked for Thursday 2:00 CT.</div></div>
+
+  <section class="kpis" aria-label="Summary">
+    <div class="b-card kpi"><small>Active builds</small><strong>3</strong><span>1 in scoping</span></div>
+    <div class="b-card kpi"><small>Delivered this quarter</small><strong>7</strong><span>All with handoff docs</span></div>
+    <div class="b-card kpi"><small>Median build time</small><strong>18 days</strong><span>Range 11 to 34</span></div>
+    <div class="b-card kpi"><small>Hours saved per week</small><strong>42</strong><span>Measured after 30 days</span></div>
+  </section>
+
+  <section class="twrap" aria-label="Builds">
+    <table>
+      <thead><tr><th>Build</th><th>Status</th><th class="hide-sm">Progress</th><th style="text-align:right">Lead time</th></tr></thead>
+      <tbody>
+        <tr><td>Invoice OCR pipeline</td><td><span class="pill" style="--c:var(--success)">Delivered</span></td><td class="hide-sm"><div class="ptrack"><div class="pfill" style="width:100%"></div></div></td><td class="num">11 days</td></tr>
+        <tr><td>Dispatch board rebuild</td><td><span class="pill" style="--c:var(--warning)">In build</span></td><td class="hide-sm"><div class="ptrack"><div class="pfill" style="width:60%"></div></div></td><td class="num">Day 9</td></tr>
+        <tr><td>Quote follow-up bot</td><td><span class="pill" style="--c:var(--accent)">Scoping</span></td><td class="hide-sm"><div class="ptrack"><div class="pfill" style="width:12%"></div></div></td><td class="num">—</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="two">
+    <div class="b-card">
+      <span class="b-badge">Build</span>
+      <h3 style="font-size:var(--fs-h4);margin:12px 0 0">Workflow intake to delivered system</h3>
+      <p style="color:var(--fg-muted);font-size:15px;margin:8px 0 16px">We map the workflow, fix the bottleneck, and hand you a running system. Most builds land in two to five weeks.</p>
+      <button class="b-btn b-btn--secondary" type="button">See process</button>
+    </div>
+    <form class="b-card" style="display:flex;flex-direction:column;gap:14px" onsubmit="return false">
+      <h3 style="font-size:var(--fs-h4);margin:0">New intake</h3>
+      <div class="b-field" style="max-width:none"><label for="company">Company</label><input id="company" class="b-input" value="Bayside Logistics"><div class="b-help">30 minutes, no deck.</div></div>
+      <div class="b-field" style="max-width:none"><label for="volume">Monthly volume</label><input id="volume" class="b-input b-input--error" value="lots"><div class="b-error-text">Enter a number.</div></div>
+      <div style="display:flex;gap:10px;justify-content:flex-end"><button class="b-btn b-btn--ghost" type="button">Cancel</button><button class="b-btn b-btn--secondary" type="submit">Save intake</button></div>
+    </form>
+  </section>
+</main>
+<script>
+const root=document.documentElement, theme=document.getElementById('theme'), variant=document.getElementById('variant');
+theme.addEventListener('click',()=>{ const dark=root.getAttribute('data-theme')!=='dark'; if(dark)root.setAttribute('data-theme','dark'); else root.removeAttribute('data-theme'); theme.textContent=dark?'Light mode':'Dark mode'; });
+variant.addEventListener('click',()=>{ const harbor=root.getAttribute('data-variant')!=='harbor'; if(harbor)root.setAttribute('data-variant','harbor'); else root.removeAttribute('data-variant'); variant.textContent=harbor?'Forge':'Harbor'; });
+</script>
+</body></html>

@@ -1,0 +1,157 @@
+{
+  "brandId": "ai-flotation",
+  "variants": {
+    "a": {
+      "systemId": "ai-flotation-a",
+      "id": "ai-flotation-a",
+      "brandId": "ai-flotation",
+      "variant": "a",
+      "variantLabel": "Option A — Forge",
+      "name": "AI Flotation",
+      "blurb": "Workflow intake to delivered system.",
+      "mark": "assets/ai-flotation-mark.svg",
+      "fonts": {
+        "heading": "Space Grotesk",
+        "body": "Archivo",
+        "license": "OFL (Google Fonts)"
+      },
+      "typeScale": {
+        "base": 16,
+        "ratio": 1.3
+      },
+      "radius": 2,
+      "shadow": "0 1px 2px rgba(20,18,16,0.30)",
+      "motion": {
+        "personality": "Decisive — crisp, immediate, no flourish",
+        "duration": {
+          "fast": "80ms",
+          "base": "140ms",
+          "slow": "210ms"
+        },
+        "easing": {
+          "standard": "cubic-bezier(0.3,0,0,1)",
+          "enter": "cubic-bezier(0.16,0,0,1)",
+          "exit": "cubic-bezier(0.4,0,1,1)"
+        },
+        "enterDistance": "5px",
+        "pressScale": 0.99,
+        "rules": "fast → hover, press, toggles · base → menus, toasts, accordions · slow → modals, view changes; exits run at fast with the exit curve; prefers-reduced-motion collapses all motion"
+      },
+      "modes": {
+        "light": {
+          "bg": "#F7F6F4",
+          "bgElevated": "#FFFFFF",
+          "fg": "#1A1917",
+          "fgMuted": "#56524B",
+          "accent": "#BA430E",
+          "accentContrast": "#FFFFFF",
+          "accentSoft": "#FBE4D5",
+          "line": "#DEDAD3",
+          "success": "#1F7A3D",
+          "warning": "#8F6400",
+          "danger": "#BB3131"
+        },
+        "dark": {
+          "bg": "#121110",
+          "bgElevated": "#1C1A18",
+          "fg": "#EDEAE6",
+          "fgMuted": "#ADA79E",
+          "accent": "#F0813C",
+          "accentContrast": "#221206",
+          "accentSoft": "#3A2313",
+          "line": "#35322E",
+          "success": "#57BE7C",
+          "warning": "#DFA83E",
+          "danger": "#F0736B"
+        }
+      },
+      "responsive": {
+        "breakpoints": {
+          "sm": "640px",
+          "md": "768px",
+          "lg": "1024px",
+          "xl": "1280px"
+        },
+        "touchTargetMin": "44px",
+        "pagePadding": "clamp(16px, 4vw, 32px)",
+        "note": "Fluid layout: paddings clamp, grids use minmax(min(Npx,100%),1fr); display type may use clamp() between the Heading and Display steps."
+      }
+    },
+    "b": {
+      "systemId": "ai-flotation-b",
+      "id": "ai-flotation-b",
+      "brandId": "ai-flotation",
+      "variant": "b",
+      "variantLabel": "Option B — Harbor",
+      "name": "AI Flotation",
+      "blurb": "Workflow intake to delivered system.",
+      "mark": "assets/ai-flotation-mark.svg",
+      "fonts": {
+        "heading": "Manrope",
+        "body": "Manrope",
+        "license": "OFL (Google Fonts)"
+      },
+      "typeScale": {
+        "base": 16,
+        "ratio": 1.3
+      },
+      "radius": 6,
+      "shadow": "0 1px 3px rgba(10,20,18,0.18)",
+      "motion": {
+        "personality": "Decisive — crisp, immediate, no flourish",
+        "duration": {
+          "fast": "80ms",
+          "base": "140ms",
+          "slow": "210ms"
+        },
+        "easing": {
+          "standard": "cubic-bezier(0.3,0,0,1)",
+          "enter": "cubic-bezier(0.16,0,0,1)",
+          "exit": "cubic-bezier(0.4,0,1,1)"
+        },
+        "enterDistance": "5px",
+        "pressScale": 0.99,
+        "rules": "fast → hover, press, toggles · base → menus, toasts, accordions · slow → modals, view changes; exits run at fast with the exit curve; prefers-reduced-motion collapses all motion"
+      },
+      "modes": {
+        "light": {
+          "bg": "#F6F8F7",
+          "bgElevated": "#FFFFFF",
+          "fg": "#14201D",
+          "fgMuted": "#4C5B57",
+          "accent": "#0E6E63",
+          "accentContrast": "#FFFFFF",
+          "accentSoft": "#D8EEE9",
+          "line": "#D6DEDB",
+          "success": "#1F7A3D",
+          "warning": "#8F6400",
+          "danger": "#BB3131"
+        },
+        "dark": {
+          "bg": "#0E1413",
+          "bgElevated": "#17201E",
+          "fg": "#E9EFED",
+          "fgMuted": "#A2B1AC",
+          "accent": "#46C2AF",
+          "accentContrast": "#062B25",
+          "accentSoft": "#123B35",
+          "line": "#2C3936",
+          "success": "#57BE7C",
+          "warning": "#DFA83E",
+          "danger": "#F0736B"
+        }
+      },
+      "responsive": {
+        "breakpoints": {
+          "sm": "640px",
+          "md": "768px",
+          "lg": "1024px",
+          "xl": "1280px"
+        },
+        "touchTargetMin": "44px",
+        "pagePadding": "clamp(16px, 4vw, 32px)",
+        "note": "Fluid layout: paddings clamp, grids use minmax(min(Npx,100%),1fr); display type may use clamp() between the Heading and Display steps."
+      }
+    }
+  }
+}

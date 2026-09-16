@@ -1,1 +1,1 @@
-# GitHub Pages: do not run Jekyll on this repo.
+# GitHub Pages: do not run Jekyll on this repo (it would drop files starting with _ and the app/ folder is served as-is).

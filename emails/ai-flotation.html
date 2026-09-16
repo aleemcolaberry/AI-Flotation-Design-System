@@ -7,40 +7,47 @@
 <meta name="supported-color-schemes" content="light">
 <title>AI Flotation — transactional email</title>
 </head>
-<body style="margin:0;padding:0;background:#F7F7F8;">
+<body style="margin:0;padding:0;background:#F7F6F4;">
 <!-- Preheader: replace with the real one-line summary; kept out of visible layout -->
 <div style="display:none;max-height:0;overflow:hidden;opacity:0;">{{preheader_text}}</div>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#F7F7F8;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#F7F6F4;">
 <tr><td align="center" style="padding:24px 12px;">
-<table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:600px;background:#FFFFFF;">
-<tr><td style="background:#17171B;padding:22px 32px;" bgcolor="#17171B">
-      <span style="font-family:'Helvetica Neue',Arial,sans-serif;font-weight:600;font-size:18px;letter-spacing:.08em;color:#FFFFFF;text-transform:uppercase;">AI FLOTATION</span>
-    </td></tr>
-<tr><td style="padding:32px 32px 8px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:1.6;color:#17171B;">
-  <p style="margin:0 0 16px;">Hi {{recipient_first_name}},</p>
-  <p style="margin:0 0 24px;">{{body_copy}}</p>
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:600px;background:#FFFFFF;border:1px solid #DEDAD3;">
+<tr><td style="background:#FFFFFF;border-bottom:3px solid #BA430E;padding:18px 32px;" bgcolor="#FFFFFF">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+      <td style="padding-right:10px;"><img src="../assets/ai-flotation-mark.png" width="26" height="26" alt="" style="display:block;width:26px;height:26px;border:0;"></td>
+      <td style="font-family:'Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:19px;color:#1A1A1A;">AI Flotation</td>
+    </tr></table>
+  </td></tr>
+<tr><td style="padding:28px 32px 0;font-family:'Helvetica Neue',Arial,sans-serif;color:#1A1A1A;">
+  <div style="font-size:21px;font-weight:700;line-height:1.3;">{{headline}}</div>
 </td></tr>
-<tr><td style="padding:0 32px 32px;">
+<tr><td style="padding:10px 32px 22px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;line-height:1.6;color:#4A4A4A;">
+  <p style="margin:0 0 12px;">Hi {{recipient_first_name}},</p>
+  <p style="margin:0;">{{body_copy}}</p>
+</td></tr>
+<tr><td style="padding:0 32px 28px;">
   <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td>
-    
-    <a href="{{cta_url}}" style="display:inline-block;background:#5646C6;color:#FFFFFF;font-family:'Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:15px;line-height:44px;height:44px;padding:0 28px;border-radius:4px;text-decoration:none;" target="_blank">{{cta_label}}</a>
-    
+    <a href="{{cta_url}}" style="display:inline-block;background:#BA430E;color:#FFFFFF;font-family:'Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:15px;line-height:44px;height:44px;padding:0 26px;border-radius:2px;text-decoration:none;" target="_blank">{{cta_label}}</a>
   </td></tr></table>
 </td></tr>
-<tr><td style="background:#F7F7F8;padding:24px 32px;border-top:1px solid #85858E20;" bgcolor="#F7F7F8">
-    <p style="margin:0;font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;line-height:1.6;color:#5A5A62;">
-      AI Flotation · [mailing address — confirm with Ali] · You're receiving project or intake updates. <a href="{{unsubscribe_url}}" style="color:#5A5A62;text-decoration:underline;">Unsubscribe</a>
+<tr><td style="background:#F6F6F6;padding:16px 32px 20px;border-top:1px solid #E4E4E3;" bgcolor="#F6F6F6">
+    <p style="margin:0;font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;line-height:1.5;color:#6B6B6B;">
+      <span style="font-weight:700;">AI Flotation LLC</span><br>
+      [Mailing address — confirm sending entity] · support@aiflotation.com · <a href="{{unsubscribe_url}}" style="color:#6B6B6B;text-decoration:underline;">Unsubscribe</a>
     </p>
   </td></tr>
 </table>
 </td></tr>
 </table>
 <!--
-  Logo: this shell ships with a text wordmark, not the PNG Gmail/Outlook require.
-  Swap in aiflotation.com's exported PNG (<=48px tall) in the header cell above.
-  Button hex confirmed from tokens/brands/ai-flotation.json → email.buttonHex = #5646C6.
-  #17171B dark band, wordmark in white Archivo 600 caps, letterspaced. Nothing else in the header.
-  White, minimal: one line of legal, one unsubscribe link. No social icons.
+  AI Flotation — transactional email skeleton (Forge direction; for Harbor swap the two #BA430E values for #0E6E63 and the 2px radius for 6px).
+  Header: mark (PNG, <= 48px) + wordmark on white with a 3px accent rule — spare, no banner. Matches the Email tab in index.html.
+  Button: email.buttonHex = #BA430E (exports/ai-flotation.payload.json). One button per email.
+  Production rules: table-based HTML, every style inline, no web fonts (system stack), max-width 600px,
+  colors chosen to survive Gmail/Outlook dark-mode inversion — no white logo on transparent.
+  Before sending: host assets/ai-flotation-mark.png on an absolute URL and replace the relative src above.
+  Copy voice: confident, spare, concrete ("Scoping call booked. 30 minutes, Thursday 2:00 CT."). Sentence case, no emoji, no exclamation marks.
 -->
 </body>
 </html>
