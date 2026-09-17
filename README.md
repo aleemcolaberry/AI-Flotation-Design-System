@@ -18,7 +18,7 @@ Every color pair (`fg`-on-`bg`, `fg`-on-`bg-elevated`, `fg-muted`-on-`bg`, `acce
 
 Implemented from the **AI Flotation Design System** Claude Design project (https://claude.ai/design/p/f6e2372d-e01f-4c16-8e6e-e055e205d790?file=AI+Flotation+Design+System.html), the AI-Flotation-only extraction of the multi-brand token project "Multi-Brand Tokens". The sibling brands (Colaberry Enterprise, Colaberry Training, Refactored, CPN) are deliberately excluded. Token values are copied verbatim; the JSON source of truth is preserved under `tokens/ai-flotation.json`.
 
-This folder is the unbundled form of that project's single-file export: the same page, split back into linkable CSS, JS, SVG and font files so it can be consumed by other projects and diffed in git. No build step anywhere — open `index.html` in a browser. It mirrors the layout of the sibling **Colaberry Enterprise Design System** repo.
+This folder is the unbundled form of that project's single-file export (last synced from the export dated 2026-09-17, which introduced the Hull mark): the same page, split back into linkable CSS, JS, SVG and font files so it can be consumed by other projects and diffed in git. No build step anywhere — open `index.html` in a browser. It mirrors the layout of the sibling **Colaberry Enterprise Design System** repo.
 
 ---
 
@@ -121,14 +121,17 @@ Voice: **confident, spare, concrete — sells competence, not inspiration.**
 
 The kit defines **no icon system** — no icon font, no SVG set, no emoji, anywhere. Alerts are text-first (bold colored lead-in instead of an icon); buttons are text-only. Communicate with text, color, and the badge/alert components; unicode glyphs (`·`, `→`, `×`) can serve as functional affordances. If an icon set becomes unavoidable, Lucide at 1.5px stroke is the closest neutral match to the brand's geometry — treat it as a **substitution, not brand canon**, and flag it as such.
 
-**Logo:** the "float over waterline" mark — a circle above two rounded rules — proposed in the source round (no prior logo existed). Lockup is mark + "AI Flotation" wordmark set in the heading font, 700 weight. Never redraw or distort the geometry; recolor only through the token system.
+**Logo:** the **Hull** mark (brainstorm option 6e, selected) — a solid vessel carrying a circular float above it: this is what floats, this is what we carry. Two fills, both from tokens: hull in `--fg`, float in `--accent`. Lockup is mark + "AI Flotation" wordmark set in the heading font, 700 weight. Minimum 16px. Never redraw or distort the geometry; recolor only through the token system.
 
-- `assets/ai-flotation-mark.svg` — the mark in Forge rust (`#BA430E`), the file the Claude Design project exported (carries its C2PA content-credential manifest).
-- `assets/ai-flotation-mark-current.svg` — the same geometry filled with `currentColor`, for token-colored inline use.
-- `assets/ai-flotation-mark-white.svg` — pre-filled white, for accent tiles and dark contexts without mask support.
-- `assets/ai-flotation-mark.png` — 512px raster of the rust mark, for email headers (≤ 48px) and app icons.
+- `assets/ai-flotation-mark.svg` — light mode: ink hull `#1A1917` + rust float `#BA430E`; the file the Claude Design project exported (carries its C2PA content-credential manifest).
+- `assets/ai-flotation-mark-dark.svg` — dark mode: `#EDEAE6` hull + `#F0813C` float, for `data-theme="dark"`.
+- `assets/ai-flotation-mark-white.svg` — single-tone white, for accent tiles and photo grounds.
+- `assets/ai-flotation-mark-mono.svg` — single-tone `currentColor`, for print, stamps and anywhere it must inherit.
+- `assets/ai-flotation-mark-512.png`, `-dark-512.png`, `-white-512.png` — 512px rasters of the three colorways.
+- `assets/ai-flotation-mark-email-52.png` — 26px @2x for email headers.
+- `assets/app-icon-512.png`, `assets/favicon.svg` — the app-icon recipe: accent tile, 22% corner radius, white mark at 58%.
 
-`index.html` and the starter screen recolor the single-alpha SVG through a CSS mask, so one file serves every token color. Lockup rules: clearspace ½ mark height on all sides; minimums mark 16px, horizontal lockup 120px wide; colors from tokens only (accent on bg, fg for mono, accentContrast on accent tiles); never stretch, rotate or add effects.
+In React the explorer draws it with the `AflMark` component (`app/src/data.jsx`: `hull` and `float` props, both hex); in plain HTML the starter screen inlines the two paths with `fill="var(--fg)"` / `fill="var(--accent)"` so one markup serves both directions and both modes. Lockup rules: clearspace ½ mark height on all sides; minimums mark 16px, horizontal lockup 120px wide; colors from tokens only (hull in fg, float in accent; fg for mono; accentContrast on accent tiles); never stretch, rotate or add effects.
 
 ## Components
 
@@ -196,7 +199,7 @@ Patterns shown in the Specimen tab (tabs, breadcrumbs, pager, chips, switch, sel
 - `tokens/` — `fonts.css` (self-hosted Space Grotesk, Archivo, Manrope), `colors.css` (Forge/Harbor × light/dark), `typography.css`, `spacing.css` (spacing + radius + shadow + breakpoints), `motion.css`, `ai-flotation.json` (the token source of truth as data — both variants)
 - `base/` — `base.css` (body/headings/links), `components.css` (the `.b-*` classes, verbatim from the kit)
 - `app/` — the explorer page only (not part of the system — consumers link `styles.css`, not these): `explorer.css` (page chrome + the explorer's own IBM Plex UI fonts), `data.js` / `specimen.js` / `views.js` / `panels.js` / `start.js` / `app.js` (pre-compiled), `src/*.jsx` (the sources, verbatim from the export apart from file paths), `build.js` (recompile after editing a source), `vendor/` (React 18.3.1 UMD)
-- `assets/` — the SVG mark in three colorways, the PNG mark; `assets/fonts/` — woff2 subsets for the three brand faces and the explorer's IBM Plex
+- `assets/` — the Hull mark in four SVG colorways, the PNG set (512px × 3, email 52px, app icon), `favicon.svg`; `assets/fonts/` — woff2 subsets for the three brand faces and the explorer's IBM Plex
 - `exports/ai-flotation.payload.json` — measured contrast ratios for both directions and both modes, email button hex and the token summary
 - `emails/ai-flotation.html` — transactional email skeleton (table-based, inline styles, `{{placeholders}}`)
 - `ui_kits/starter/` — starter screen: client build tracker (nav, KPIs, builds table, intake form, direction + dark-mode toggles)
@@ -207,6 +210,6 @@ Patterns shown in the Specimen tab (tabs, breadcrumbs, pager, chips, switch, sel
 - **Fonts:** Space Grotesk, Archivo and Manrope (all SIL OFL) are self-hosted from `assets/fonts/` as the subsetted variable-font files the export shipped; one file per unicode subset serves every weight. `tokens/fonts.css` has the one-line Google Fonts swap if you would rather not ship binaries. IBM Plex Sans / Mono are only the explorer's UI chrome and are not brand fonts.
 - **The explorer is a React page** (React 18 UMD, JSX pre-compiled to plain JS) so it runs from a double-click with no tooling. Edit `app/src/*.jsx`, then `npm install --no-save @babel/standalone && node app/build.js` to recompile.
 - **The starter screen is a composition**, not a recreation — the source project contained tokens, components, specimen and an email, but no product screens. Tokens / components / voice are ground truth; the build-tracker layout is illustrative.
-- **Not in this export:** the source project's React primitives (`components/core/`), `guidelines/cards/`, and the `ui_kits/marketing/` and `ui_kits/portal/` screens did not ship in the single-file export; the `.b-*` CSS is the complete component contract here.
+- **Not in this export:** the source project's React primitives (`components/core/`, including its `Mark` component), `guidelines/cards/`, the `ui_kits/marketing/` and `ui_kits/portal/` screens, and the `Logo Brainstorm.html` exploration record did not ship in the single-file export; the `.b-*` CSS is the complete component contract here, and the explorer's `AflMark` is the logo component. The mark colorways and PNGs the guide names were regenerated here from the exported SVG's geometry.
 - **Email divergence:** an earlier draft of `emails/ai-flotation.html` used a dark band header and a purple (`#5646C6`) button inherited from an older payload. This repo's contract is the one the Email tab renders — white header, mark + wordmark, 3px accent rule, rust `#BA430E` button; treat this folder as canonical.
 - **Re-syncing from Claude Design:** the share link is the source of truth. To re-import, download the single-file HTML export and unbundle it into this layout (the `__bundler/manifest` script tag holds every file gzip+base64; the `__bundler/template` tag holds the page), keeping token CSS byte-identical.

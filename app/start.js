@@ -11,7 +11,7 @@ function AflStart({ b, setView, copied, copyText }) {
   return /*#__PURE__*/React.createElement("div", { style: { display: 'flex', flexDirection: 'column', gap: '18px' } }, /*#__PURE__*/
   React.createElement("div", { style: { background: L.bg, border: '1px solid ' + L.line, borderRadius: '14px', padding: 'clamp(28px,5vw,48px)', fontFamily: body, color: L.fg, animation: 'dcIn-a 210ms cubic-bezier(0.16,0,0,1) both' } }, /*#__PURE__*/
   React.createElement("div", { style: { display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap' } }, /*#__PURE__*/
-  React.createElement("span", { style: aflMask(b.mark, 52, L.accent) }), /*#__PURE__*/
+  React.createElement(AflMark, { size: 52, hull: L.fg, float: L.accent }), /*#__PURE__*/
   React.createElement("span", { style: { fontFamily: heading, fontWeight: 700, fontSize: 'clamp(28px,4vw,40px)', letterSpacing: '-0.01em' } }, "AI Flotation design system")
   ), /*#__PURE__*/
   React.createElement("div", { style: { fontSize: '16px', lineHeight: 1.55, color: L.fgMuted, maxWidth: '640px', margin: '14px 0 20px' } }, "Workflow intake to delivered system. One token set, two directions \u2014 ", /*#__PURE__*/React.createElement("strong", { style: { color: '#BA430E' } }, "Forge"), " (Space Grotesk + Archivo, rust, 2px) and ", /*#__PURE__*/React.createElement("strong", { style: { color: '#0E6E63' } }, "Harbor"), " (Manrope, teal, 6px) \u2014 each in light and dark, every AA pair guaranteed. Tokens are data; everything downstream is generated."), /*#__PURE__*/
@@ -47,7 +47,7 @@ function AflStart({ b, setView, copied, copyText }) {
   React.createElement("div", null, /*#__PURE__*/React.createElement("span", { style: mono }, "tokens/"), " \u2014 colors, type, spacing, motion, fonts"), /*#__PURE__*/
   React.createElement("div", null, /*#__PURE__*/React.createElement("span", { style: mono }, "base/"), " \u2014 element resets + .b-* component classes"), /*#__PURE__*/
   React.createElement("div", null, /*#__PURE__*/React.createElement("span", { style: mono }, "app/"), " \u2014 this explorer (React, pre-compiled; sources in app/src/)"), /*#__PURE__*/
-  React.createElement("div", null, /*#__PURE__*/React.createElement("span", { style: mono }, "assets/"), " \u2014 the float-over-waterline mark (3 colorways + PNG) \xB7 self-hosted fonts"), /*#__PURE__*/
+  React.createElement("div", null, /*#__PURE__*/React.createElement("span", { style: mono }, "assets/"), " \u2014 the hull mark (4 SVG colorways, PNG set, favicon) \xB7 self-hosted fonts"), /*#__PURE__*/
   React.createElement("div", null, /*#__PURE__*/React.createElement("span", { style: mono }, "ui_kits/starter/"), " \u2014 a build-tracker screen composed from the .b-* classes"), /*#__PURE__*/
   React.createElement("div", null, /*#__PURE__*/React.createElement("span", { style: mono }, "emails/"), " \u2014 send-ready transactional email"), /*#__PURE__*/
   React.createElement("div", null, /*#__PURE__*/React.createElement("span", { style: mono }, "exports/"), " \u2014 measured contrast ratios \xB7 ", /*#__PURE__*/React.createElement("span", { style: mono }, "README.md"), " \xB7 ", /*#__PURE__*/React.createElement("span", { style: mono }, "SKILL.md"))

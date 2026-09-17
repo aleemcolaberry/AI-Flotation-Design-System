@@ -10,7 +10,7 @@ function AflStart({ b, setView, copied, copyText }) {
   return <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
     <div style={{ background: L.bg, border: '1px solid ' + L.line, borderRadius: '14px', padding: 'clamp(28px,5vw,48px)', fontFamily: body, color: L.fg, animation: 'dcIn-a 210ms cubic-bezier(0.16,0,0,1) both' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap' }}>
-        <span style={aflMask(b.mark, 52, L.accent)}></span>
+        <AflMark size={52} hull={L.fg} float={L.accent}/>
         <span style={{ fontFamily: heading, fontWeight: 700, fontSize: 'clamp(28px,4vw,40px)', letterSpacing: '-0.01em' }}>AI Flotation design system</span>
       </div>
       <div style={{ fontSize: '16px', lineHeight: 1.55, color: L.fgMuted, maxWidth: '640px', margin: '14px 0 20px' }}>Workflow intake to delivered system. One token set, two directions — <strong style={{ color: '#BA430E' }}>Forge</strong> (Space Grotesk + Archivo, rust, 2px) and <strong style={{ color: '#0E6E63' }}>Harbor</strong> (Manrope, teal, 6px) — each in light and dark, every AA pair guaranteed. Tokens are data; everything downstream is generated.</div>
@@ -46,7 +46,7 @@ function AflStart({ b, setView, copied, copyText }) {
         <div><span style={mono}>tokens/</span> — colors, type, spacing, motion, fonts</div>
         <div><span style={mono}>base/</span> — element resets + .b-* component classes</div>
         <div><span style={mono}>app/</span> — this explorer (React, pre-compiled; sources in app/src/)</div>
-        <div><span style={mono}>assets/</span> — the float-over-waterline mark (3 colorways + PNG) · self-hosted fonts</div>
+        <div><span style={mono}>assets/</span> — the hull mark (4 SVG colorways, PNG set, favicon) · self-hosted fonts</div>
         <div><span style={mono}>ui_kits/starter/</span> — a build-tracker screen composed from the .b-* classes</div>
         <div><span style={mono}>emails/</span> — send-ready transactional email</div>
         <div><span style={mono}>exports/</span> — measured contrast ratios · <span style={mono}>README.md</span> · <span style={mono}>SKILL.md</span></div>

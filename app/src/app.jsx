@@ -30,7 +30,7 @@ function AflApp() {
   return <div style={{ minHeight: '100vh', fontFamily: "'IBM Plex Sans',system-ui,sans-serif", color: '#1A1D21', paddingBottom: '64px' }}>
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px', padding: 'clamp(12px,3vw,18px) clamp(16px,4vw,32px)', borderBottom: '1px solid #D9DBDF', background: '#FFFFFF' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-        <span style={aflMask(b.mark, 30, '#BA430E')}></span>
+        <AflMark size={30}/>
         <div>
           <div style={{ fontSize: '17px', fontWeight: 600 }}>AI Flotation token system</div>
           <div style={{ fontSize: '12.5px', color: '#5C6470', marginTop: '2px' }}>One component library · two directions · tokens as data · per-direction motion · WCAG 2.1 AA in both modes</div>

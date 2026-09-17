@@ -34,7 +34,7 @@ function AflPanel({ b, mode, demo, setDemo, copied, copyText, swap }) {
     <div style={{ display: 'inline-block', fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: m.fgMuted, border: '1px solid ' + m.line, borderRadius: '999px', padding: '3px 10px', marginBottom: '10px' }}>{mode === 'light' ? 'Light' : 'Dark'}</div>
     <div style={{ ...sec, margin: '10px 0 10px' }}>Nav</div>
     <div style={{ display: 'flex', flexWrap: 'wrap', rowGap: '10px', alignItems: 'center', gap: '16px', background: m.bgElevated, border: '1px solid ' + m.line, borderRadius: (b.radius + 2) + 'px', padding: '12px 16px', boxShadow: b.shadow }}>
-      <span style={{ display: 'inline-flex', alignItems: 'center', gap: '10px' }}><span style={aflMask(b.mark, 26, m.accent)}></span><span style={{ fontFamily: heading, fontWeight: hw, fontSize: '17px', color: m.fg }}>{b.name}</span></span>
+      <span style={{ display: 'inline-flex', alignItems: 'center', gap: '10px' }}><AflMark size={26} hull={m.fg} float={m.accent}/><span style={{ fontFamily: heading, fontWeight: hw, fontSize: '17px', color: m.fg }}>{b.name}</span></span>
       <div style={{ display: 'flex', gap: '18px', alignItems: 'center', marginLeft: 'auto' }}>
         <span style={{ fontSize: (base - 2) + 'px', color: m.accent, fontWeight: 600, cursor: 'pointer', padding: '12px 4px' }}>Programs</span>
         <span style={{ fontSize: (base - 2) + 'px', color: m.fgMuted, cursor: 'pointer', padding: '12px 4px' }}>Outcomes</span>

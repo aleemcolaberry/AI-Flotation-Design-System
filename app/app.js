@@ -31,7 +31,7 @@ function AflApp() {
   return /*#__PURE__*/React.createElement("div", { style: { minHeight: '100vh', fontFamily: "'IBM Plex Sans',system-ui,sans-serif", color: '#1A1D21', paddingBottom: '64px' } }, /*#__PURE__*/
   React.createElement("div", { style: { display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px', padding: 'clamp(12px,3vw,18px) clamp(16px,4vw,32px)', borderBottom: '1px solid #D9DBDF', background: '#FFFFFF' } }, /*#__PURE__*/
   React.createElement("div", { style: { display: 'flex', alignItems: 'center', gap: '12px' } }, /*#__PURE__*/
-  React.createElement("span", { style: aflMask(b.mark, 30, '#BA430E') }), /*#__PURE__*/
+  React.createElement(AflMark, { size: 30 }), /*#__PURE__*/
   React.createElement("div", null, /*#__PURE__*/
   React.createElement("div", { style: { fontSize: '17px', fontWeight: 600 } }, "AI Flotation token system"), /*#__PURE__*/
   React.createElement("div", { style: { fontSize: '12.5px', color: '#5C6470', marginTop: '2px' } }, "One component library \xB7 two directions \xB7 tokens as data \xB7 per-direction motion \xB7 WCAG 2.1 AA in both modes")

@@ -3,13 +3,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Builds — AI Flotation starter screen</title>
-<link rel="icon" type="image/svg+xml" href="../../assets/ai-flotation-mark.svg">
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
 <link rel="stylesheet" href="../../styles.css">
 <style>
 /* Starter screen — page chrome only. Everything visual comes from the tokens in styles.css; flip direction and mode from the nav and nothing here changes. */
 .nav{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:12px var(--page-padding);background:var(--bg-elevated);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
 .lock{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:inherit;font-family:var(--font-heading);font-weight:var(--fw-heading);font-size:18px;letter-spacing:-0.01em}
-.mark{width:26px;height:26px;background:var(--accent);-webkit-mask:url(../../assets/ai-flotation-mark.svg) center/contain no-repeat;mask:url(../../assets/ai-flotation-mark.svg) center/contain no-repeat;flex-shrink:0}
+.mark{width:26px;height:26px;display:block;flex-shrink:0} /* the Hull mark inline: hull in --fg, float in --accent, so both directions and both modes recolor it */
 .links{display:flex;gap:18px;margin-left:auto;align-items:center;flex-wrap:wrap}
 .links a{font-size:14px;color:var(--fg-muted);text-decoration:none;padding:12px 4px}
 .links a.on{color:var(--accent);font-weight:600}
@@ -37,7 +37,7 @@ td.num{text-align:right;font-variant-numeric:tabular-nums;color:var(--fg-muted)}
 </head>
 <body>
 <header class="nav">
-  <a class="lock" href="../../index.html"><span class="mark"></span>AI Flotation</a>
+  <a class="lock" href="../../index.html"><svg class="mark" viewBox="0 0 120 120" aria-hidden="true"><path d="M16 54 H104 L93 86 A60 60 0 0 1 27 86 Z" fill="var(--fg)"/><path d="M45 30 A15 15 0 1 0 75 30 A15 15 0 1 0 45 30 Z" fill="var(--accent)"/></svg>AI Flotation</a>
   <nav class="links" aria-label="Primary">
     <a href="#" class="on">Builds</a><a href="#">Scoping</a><a href="#">Handoffs</a>
     <button class="b-btn b-btn--ghost" id="variant" type="button">Harbor</button>

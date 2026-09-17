@@ -13,3 +13,6 @@ dist/
 .cache/
 npm-debug.log*
 package-lock.json
+
+# Raw Claude Design downloads dropped here for a re-sync (the unbundled files are the repo; the export stays local)
+AI Flotation Design System*.html
